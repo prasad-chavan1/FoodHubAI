@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Data Filtering</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+
+<h2>Car Data Filtering</h2>
+
+<select id="filterSelect">
+  <option value="all">All</option>
+  <option value="bmw">BMW</option>
+  <option value="audi">Audi</option>
+  <option value="honda">Honda</option>
+</select>
+
+<table id="carTable">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Brand</th>
+    </tr>
+  </thead>
+  <tbody id="carTableBody"></tbody>
+</table>
+
+<script>
+  // Sample car data
+  var carData = [
+    { model: 'X5', brand: 'BMW' },
+    { model: 'A4', brand: 'Audi' },
+    { model: 'Civic', brand: 'Honda' },
+    { model: '3 Series', brand: 'BMW' },
+    { model: 'Q5', brand: 'Audi' },
+    { model: 'Accord', brand: 'Honda' }
+  ];
+
+  // Function to render car data based on filter
+  function renderCarData(filterValue) {
+    var filteredCarData = carData.filter(function(car) {
+      return filterValue === 'all' || car.brand.toLowerCase() === filterValue;
+    });
+
+    var html = '';
+    filteredCarData.forEach(function(car) {
+      html += '<tr><td>' + car.model + '</td><td>' + car.brand + '</td></tr>';
+    });
+
+    document.getElementById('carTableBody').innerHTML = html;
+  }
+
+  document.getElementById('filterSelect').addEventListener('change', function() {
+    var filterValue = this.value;
+    renderCarData(filterValue);
+  });
+
+  // Initially render all car data
+  renderCarData('all');
+</script>
+
+</body>
+</html>

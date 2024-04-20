@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    - custom css link 
+  -->
+    <link rel="stylesheet" href="./assets/css/foodhub.css">
+    <link rel="stylesheet" href="./assets/css/media_query.css">
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+        <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+        <script src="https://mediafiles.botpress.cloud/ea2433de-525e-4ef4-a8f9-d95bdbadf70f/webchat/config.js" defer></script>
+    
+    <style>
+        .pt-4 {
+            padding-top: 136px;
+        }
+
+        .p-4 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+
+        <!--
+      - #HEADER
+    -->
+
+        <header>
+
+            <nav class="navbar">
+
+                <div class="navbar-wrapper">
+
+                    <a href="#">
+                        <img src="./assets/images/logo.svg" alt="logo" width="130">
+                    </a>
+
+                    <ul class="navbar-nav">
+
+                        <li>
+                            <a href="/index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="/menuPage.html" class="nav-link">Our Menu</a>
+                        </li>
+
+
+
+                    </ul>
+
+                    <div class="navbar-btn-group">
+
+                        <button class="shopping-cart-btn">
+                            <img src="./assets/images/search.svg" alt="shopping cart icon" width="18">
+                            <span class="count">?</span>
+                        </button>
+
+                        <button class="menu-toggle-btn">
+                            <span class="line one"></span>
+                            <span class="line two"></span>
+                            <span class="line three"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+            <div class="cart-box">
+                <div class="container" id="searchContainer">
+                    <input type="text" id="searchInput" placeholder="Search for recipes...">
+                    <!-- <button id="searchButton">Search</button> -->
+                    <button id="searchButton" class="btn btn-primary btn-icon">Search</button>
+                </div>
+
+                <ul class="cart-box-ul" id="recipeContainer">
+
+                </ul>
+            </div>
+
+        </header>
+
+
+
+        <!--
+        - #ABOUT SECTION
+      -->
+
+        <section class="about pt-4" id="recipeAbout">
+
+
+
+        </section>
+
+
+
+        <div class="products-grid p-4" id="recipeDetailGrid">
+
+
+
+        </div>
+
+
+
+
+
+        <!--
+        - #SERVICES SECTION
+      -->
+
+        <section class="services" id="instructions">
+
+
+
+        </section>
+
+
+
+
+
+
+        <!--
+      - #FOOTER
+    -->
+
+        <footer>
+
+            <div class="footer-wrapper">
+
+                <a href="#">
+                    <img src="./assets/images/logo-footer.svg" alt="logo" class="footer-brand" width="130">
+                </a>
+
+                <div class="social-link">
+
+                    <a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+
+                    <a href="#">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+
+                </div>
+
+                <p class="copyright">&copy; Made in ❤️ by Pranshu. All Rights Reserved.</p>
+
+            </div>
+
+        </footer>
+
+    </div>
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/foodhub.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/assets/js/recipeView.js"></script>
+</body>
